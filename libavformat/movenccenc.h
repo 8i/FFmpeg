@@ -79,6 +79,11 @@ int ff_mov_cenc_avc_write_nal_units(AVFormatContext *s, MOVMuxCencContext* ctx, 
 void ff_mov_cenc_write_stbl_atoms(MOVMuxCencContext* ctx, AVIOContext *pb);
 
 /**
+ * Reset the Auxiliary info sizes
+ */
+void ff_mov_cenc_reset_auxiliary_info(MOVMuxCencContext* ctx);
+
+/**
  * Write the sinf atom, contained inside stsd
  */
 int ff_mov_cenc_write_sinf_tag(struct MOVTrack* track, AVIOContext *pb, uint8_t* kid);
