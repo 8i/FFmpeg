@@ -24,6 +24,12 @@
 #include "movenc.h"
 #include "avc.h"
 
+void ff_mov_cenc_reset_auxiliary_info(MOVMuxCencContext* ctx)
+{
+    ctx->auxiliary_info_size = 0;
+    ctx->auxiliary_info_entries = 0;
+}
+
 static int auxiliary_info_alloc_size(MOVMuxCencContext* ctx, int size)
 {
     size_t new_alloc_size;
