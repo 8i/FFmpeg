@@ -9,7 +9,8 @@ SCRATCH="scratch"
 THIN=`pwd`/"thin"
 
 CONFIGURE_FLAGS="--enable-cross-compile --disable-debug --disable-programs \
-                 --disable-doc --enable-pic --enable-shared"
+                 --disable-doc --enable-pic --enable-shared --enable-rpath \
+                 --install-name-dir=@rpath"
 
 if [ "$X264" ]
 then
